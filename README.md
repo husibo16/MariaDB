@@ -73,7 +73,7 @@ sudo ./install_mariadb.sh
 bash install_mariadb.sh
 ```
 
-🧩 登录与验证
+## 🧩 登录与验证
 
 1️⃣ 使用 root 用户登录（本地）
 ```bash
