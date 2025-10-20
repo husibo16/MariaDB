@@ -2,7 +2,7 @@
 
 > 适配系统：Debian / Ubuntu（含 Debian 13 Trixie）  
 > 功能：自动安装 MariaDB、启用日志、创建全局管理员用户  
-> 作者：ChatGPT 实践版（2025）  
+> 作者：胡博涵 实践版（2025）  
 > 版本：v1.0
 
 ---
