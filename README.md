@@ -109,5 +109,4 @@ SHOW GRANTS FOR 'xboard'@'%';
 4️⃣ 退出 MySQL
 ```bash
 exit;
-
 ```
