@@ -16,7 +16,25 @@
 3. 初始化 `root` 密码（安全配置）  
 4. 创建业务数据库与具备全局权限的管理员账号  
 5. 启用 **通用日志** 与 **慢查询日志**  
-6. 自动备份原始配置文件并输出日志至 `/var/log/mysql_install.log`
+6. 自动备份原始配置文件并输出日志至 `/var/log/mysql_install.log`  
+7. 支持远程连接（需手动修改配置项）  
+
+> 💡 如果需要远程访问 MariaDB，请编辑配置文件：
+> ```bash
+> sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+> ```
+> 将以下行：
+> ```
+> bind-address = 127.0.0.1
+> ```
+> 修改为：
+> ```
+> bind-address = 0.0.0.0
+> ```
+> 然后重启服务：
+> ```bash
+> sudo systemctl restart mariadb
+> ```
 
 ---
 
@@ -28,7 +46,7 @@
 | root 密码 | `Root@123456` | 可在脚本顶部修改 |
 | 新数据库名 | `xboard` | 可在脚本顶部修改 |
 | 新用户名 | `xboard` | 拥有全局管理权限 |
-| 新用户密码 | `3uA3iPqOwzNyUlMB` | 随机默认，可自定义 |
+| 新用户密码 | `3uA3iPqOwzNyUlMB` | 可自定义 |
 | 日志目录 | `/var/log/mysql/` | 含通用日志与慢查询日志 |
 
 ---
@@ -39,6 +57,18 @@
 
 ```bash
 wget -O install_mariadb.sh https://raw.githubusercontent.com/husibo16/MariaDB/main/install_mariadb.sh
-chmod +x install_mariadb.sh
- ./install_mariadb.sh
+```
+2️⃣ 赋予执行权限并运行
 
+```bash
+chmod +x install_mariadb.sh
+sudo ./install_mariadb.sh
+```
+⚠️ 说明：
+
+./install_mariadb.sh 表示按照脚本首行指定的解释器（#!/usr/bin/env bash）执行；
+
+若你想调试或不想改权限，也可用：
+```bash
+bash install_mariadb.sh
+```
