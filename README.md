@@ -74,6 +74,7 @@ bash install_mariadb.sh
 ```
 
 🧩 登录与验证
+
 1️⃣ 使用 root 用户登录（本地）
 ```bash
 mysql -u root -p
@@ -90,23 +91,24 @@ mysql -u xboard -p3uA3iPqOwzNyUlMB -h 127.0.0.1 -P 3306
 > - -h 主机地址（127.0.0.1 为本机）
 > - -P 端口号（默认 3306）
 3️⃣ 登录后常用验证命令
-查看所有数据库
+- 查看所有数据库
 ```bash
 SHOW DATABASES;
 ```
-切换到指定数据库
+- 切换到指定数据库
 ```bash
 USE xboard;
 ```
-查看当前登录用户
+- 查看当前登录用户
 ```bash
 SELECT USER(), CURRENT_USER();
 ```
-查看权限
+- 查看权限
 ```bash
 SHOW GRANTS FOR 'xboard'@'%';
 ```
 4️⃣ 退出 MySQL
+
 ```bash
 exit;
 ```
