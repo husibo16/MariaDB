@@ -40,5 +40,5 @@
 ```bash
 wget -O install_mariadb.sh https://raw.githubusercontent.com/husibo16/MariaDB/main/install_mariadb.sh
 chmod +x install_mariadb.sh
-sudo ./install_mariadb.sh
+ ./install_mariadb.sh
 
