@@ -72,7 +72,7 @@ sudo ./install_mariadb.sh
 ```bash
 bash install_mariadb.sh
 ```
-当前系统安装的 MariaDB 客户端版本
+查看当前系统安装的 MariaDB 客户端版本
 
 ```bash
 mariadb --version
