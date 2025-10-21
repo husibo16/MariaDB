@@ -72,7 +72,11 @@ sudo ./install_mariadb.sh
 ```bash
 bash install_mariadb.sh
 ```
+当前系统安装的 MariaDB 客户端版本
 
+```bash
+mariadb --version
+```
 ## 🧩 登录与验证
 
 1️⃣ 使用 root 用户登录（本地）
